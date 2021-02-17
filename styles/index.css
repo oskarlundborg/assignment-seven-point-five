@@ -1,0 +1,93 @@
+/*Main CSS*/
+    body {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        width: 1227px;
+        height: 868px;
+        background-image:url("../images/skybox.png") ;
+        display: flex;
+        justify-content: center;
+    }
+/*Window*/
+    .window {
+        z-index: 999;
+        width: 400px;
+        height: 600px;
+        margin-top: 50px;
+        box-shadow: 0 0 0 99999px rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .title {
+        font-size: 50px;
+        color: rgb(78, 88, 95);
+        font-family:Arial, Helvetica, sans-serif;
+
+    }
+
+/*objects*/
+    .object {
+        position: absolute;
+        z-index: 99;
+    }
+    
+    /*clouds*/
+        .cloud-one {
+            left: 300px;
+            top: 200px;
+            width: 200px;
+            height: 100px;
+            opacity: 50%;
+            animation: cloudmove-one 20s linear infinite;
+        }
+        .cloud-two {
+            left: 400px;
+            width: 200px;
+            height: 100px;
+            opacity: 50%;
+            animation: cloudmove-two 10s linear infinite;
+        }
+
+        @keyframes cloudmove-one {
+            50% {left: 550px;}
+            100% {left: 1350px;}
+        }
+
+        @keyframes cloudmove-two {
+            0% {left: 400px;}
+            100% {left: 1150px;}
+        }
+
+    /*Lightning*/
+        .lightning-one {
+            left: 900px;
+            width: 400px;
+            height: 500px;
+            animation: strike-one 10s ease infinite ;
+        }
+        .lightning-two {
+            left: 800px;
+            width: 200px;
+            height: 500px;
+            animation: strike-two 10s ease infinite;
+        }
+
+        @keyframes strike-one {
+        0% {opacity: 0;}
+        59% {opacity: 0;}
+        60% {opacity: 100;}
+        65% {opacity: 0;}
+        100% {opacity: 0;}
+        }
+
+        @keyframes strike-two {
+            0% {opacity: 0;}
+            1% {opacity: 100;}
+            5% {opacity: 0;}
+            100% {opacity: 0;}
+        }
